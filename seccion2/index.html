@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo HTML</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
@@ -25,7 +32,7 @@
     <div class="hero"></div>
 
     <section class="categorias contenedor">
-        <h3 class="categorias__titulo">Categoria de productos</h3>
+        <h2 class="categorias__titulo">Categoria de productos</h2>
         <div class="categorias__grid">
             <div class="categoria">
                 <img src="/img/categoria1.jpg" alt="Imagen categoria oficina">
@@ -43,19 +50,21 @@
     </section>
 
     <section class="sobre-nosotros">
-        <div class="nosotros">
-            <h2 class="nosotros__titulo">Sobre nosotros</h2>
-            <p class="nosotros__texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro sint perferendis, veniam tenetur optio nobis beatae expedita maiores a, 
-            quos modi itaque exercitationem, cum praesentium odit provident id ullam?</p>
+        <div class="sobre-nosotros-grid contenedor">
+           <div class="nosotros">
+                <h2 class="nosotros__titulo">Sobre nosotros</h2>
+                <p class="nosotros__texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro sint perferendis, veniam tenetur optio nobis beatae expedita maiores a, 
+                quos modi itaque exercitationem, cum praesentium odit provident id ullam?</p>
+           </div>
         </div>
     </section>
 
-    <main class="productos">
+    <main class="productos contenedor">
         <h2 class="productos__titulo">Nuestro productos</h2>
         <div class="productos__listado">
-            <div class="producto__contenido">
+            <div class="producto">
                 <img src="/img/producto1.jpg" alt="Imagen producto 1">
-                <div class="producto">
+                <div class="producto__contenido">
                     <h3 class="producto__titulo">Producto 1</h3>
                     <p class="producto__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero delectus quidem minus ratione incidunt rerum, magnam id dolor assumenda, voluptas repellendus 
                     deleniti inventore culpa sequi aliquam perferendis, saepe officia molestiae!</p>
@@ -63,9 +72,9 @@
                     <button type="button" class="producto__boton">Agregar al carrito</button>
                 </div>
             </div> <!--Fin producto 1-->
-            <div class="producto__contenido">
+            <div class="producto">
                 <img src="/img/producto2.jpg" alt="Imagen producto 2">
-                <div class="producto">
+                <div class="producto__contenido">
                     <h3 class="producto__titulo">Producto 2</h3>
                     <p class="producto__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero delectus quidem minus ratione incidunt rerum, magnam id dolor assumenda, voluptas repellendus 
                     deleniti inventore culpa sequi aliquam perferendis, saepe officia molestiae!</p>
@@ -73,9 +82,9 @@
                     <button type="button" class="producto__boton">Agregar al carrito</button>
                 </div>
             </div> <!--Fin producto 2-->
-            <div class="producto__contenido">
+            <div class="producto">
                 <img src="/img/producto3.jpg" alt="Imagen producto 3">
-                <div class="producto">
+                <div class="producto__contenido">
                     <h3 class="producto__titulo">Producto 3</h3>
                     <p class="producto__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero delectus quidem minus ratione incidunt rerum, magnam id dolor assumenda, voluptas repellendus 
                     deleniti inventore culpa sequi aliquam perferendis, saepe officia molestiae!</p>
@@ -83,9 +92,9 @@
                     <button type="button" class="producto__boton">Agregar al carrito</button>
                 </div>
             </div> <!--Fin producto 3-->
-            <div class="producto__contenido">
+            <div class="producto">
                 <img src="/img/producto4.jpg" alt="Imagen producto 4">
-                <div class="producto">
+                <div class="producto__contenido">
                     <h3 class="producto__titulo">Producto 4</h3>
                     <p class="producto__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero delectus quidem minus ratione incidunt rerum, magnam id dolor assumenda, voluptas repellendus 
                     deleniti inventore culpa sequi aliquam perferendis, saepe officia molestiae!</p>
@@ -93,9 +102,9 @@
                     <button type="button" class="producto__boton">Agregar al carrito</button>
                 </div>
             </div> <!--Fin producto 4-->
-            <div class="producto__contenido">
-                <img src="/img/producto15.jpg" alt="Imagen producto 5">
-                <div class="producto">
+            <div class="producto">
+                <img src="/img/producto5.jpg" alt="Imagen producto 5">
+                <div class="producto__contenido">
                     <h3 class="producto__titulo">Producto 5</h3>
                     <p class="producto__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero delectus quidem minus ratione incidunt rerum, magnam id dolor assumenda, voluptas repellendus 
                     deleniti inventore culpa sequi aliquam perferendis, saepe officia molestiae!</p>
@@ -103,9 +112,9 @@
                     <button type="button" class="producto__boton">Agregar al carrito</button>
                 </div>
             </div><!--Fin producto 5-->
-            <div class="producto__contenido">
+            <div class="producto">
                 <img src="/img/producto6.jpg" alt="Imagen producto 6">
-                <div class="producto">
+                <div class="producto__contenido">
                     <h3 class="producto__titulo">Producto 6</h3>
                     <p class="producto__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero delectus quidem minus ratione incidunt rerum, magnam id dolor assumenda, voluptas repellendus 
                     deleniti inventore culpa sequi aliquam perferendis, saepe officia molestiae!</p>
@@ -116,33 +125,39 @@
         </div> <!--Fin Listado de productos-->
     </main>
 
-    <footer class="footer">
-        <div class="footer__contenido">
-            <div class="footer-seccion">
-                <h3 class="footer-seccion__titulo">Categorías</h3>
-                <a href="#" class="footer-seccion__enlace">Cocina</a>
-                <a href="#" class="footer-seccion__enlace">Oficina</a>
-                <a href="#" class="footer-seccion__enlace">Jardin</a>
-                <a href="#" class="footer-seccion__enlace">Cochera</a>
-                <a href="#" class="footer-seccion__enlace">Dormitorios</a>
+    <footer class="site-footer">
+        <div class="site-footer__grid contenedor">
+            <div class="site-footer-seccion">
+                <h3 class="site-footer-seccion__titulo">Categorías</h3>
+                <nav class="site-footer-seccion__menu">
+                    <a href="#" class="site-footer-seccion__enlace">Cocina</a>
+                    <a href="#" class="site-footer-seccion__enlace">Oficina</a>
+                    <a href="#" class="site-footer-seccion__enlace">Jardin</a>
+                    <a href="#" class="site-footer-seccion__enlace">Cochera</a>
+                    <a href="#" class="site-footer-seccion__enlace">Dormitorios</a>
+                </nav>
             </div>
-            <div class="footer-seccion">
-                <h3 class="footer-seccion__titlo">Sobre Nosotros</h3>
-                <a href="#" class="footer-seccion__enlace">Nuestra Historia</a>
-                <a href="#" class="footer-seccion__enlace">Misión, Visión y Valores</a>
-                <a href="#" class="footer-seccion__enlace">Carreras</a>
-                <a href="#" class="footer-seccion__enlace">Política de Privacidad</a>
-                <a href="#" class="footer-seccion__enlace">Términos de Servicio</a>
+            <div class="site-footer-seccion">
+                <h3 class="site-footer-seccion__titlo">Sobre Nosotros</h3>
+                <nav class="site-footer-seccion__menu">
+                    <a href="#" class="site-footer-seccion__enlace">Nuestra Historia</a>
+                    <a href="#" class="site-footer-seccion__enlace">Misión, Visión y Valores</a>
+                    <a href="#" class="site-footer-seccion__enlace">Carreras</a>
+                    <a href="#" class="site-footer-seccion__enlace">Política de Privacidad</a>
+                    <a href="#" class="site-footer-seccion__enlace">Términos de Servicio</a>
+                </nav>
             </div>
-            <div class="footer-seccion">
-                <h3 class="footer-seccion__titulo">Soporte</h3>
-                <a href="#" class="footer-seccion__enlace">Preguntas Frecuentes</a>
-                <a href="#" class="footer-seccion__enlace">Ayuda en Línea</a>
-                <a href="#" class="footer-seccion__enlace">Confianza y Seguridad</a>
+            <div class="site-footer-seccion">
+                <h3 class="site-footer-seccion__titulo">Soporte</h3>
+                <nav class="site-footer-seccion__menu">
+                    <a href="#" class="site-footer-seccion__enlace">Preguntas Frecuentes</a>
+                    <a href="#" class="site-footer-seccion__enlace">Ayuda en Línea</a>
+                    <a href="#" class="site-footer-seccion__enlace">Confianza y Seguridad</a>
+                </nav>
             </div>
         </div>
 
-        <p class="footer__copyright"> Tienda Mueble - Todos los derechos reservados &copy; 2023</p>
+        <p class="site-footer__copyright"> Tienda Mueble - Todos los derechos reservados &copy; 2023</p>
     </footer>
 </body>
 </html>
