@@ -2,11 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
-    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Contacto</title>
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Contacto</h1>
+    <header class="header">
+        <h1 class="header__titulo">Tienda <span class="span">Muebles</span></h1>
+    </header>
     <div class="contenedor-navegacion">
         <nav class="navegacion contenedor">
             <a class="navegacion__enlace" href="/index.html">Inicio</a>
@@ -17,5 +28,112 @@
             <a class="navegacion__enlace" href="/contacto.html">Contacto</a>
         </nav>
     </div>
+
+    <main class="contacto contenedor">
+        <h2 class="contacto__titulo">Contacto</h2>
+        <div class="contacto__formulario">
+            <form class="formulario contenedor-md">
+                <fieldset class="formulario__fieldset">
+                    <legend class="formulario__legend">Tus datos</legend>
+                    <div class="formulario__campo">
+                        <label for="nombre" class="formulario__label">Nombre</label>
+                        <input type="text" class="formulario__input" id="nombre" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="asunto" class="formulario__label">Asunto</label>
+                        <input type="text" class="formulario__input" id="asunto" placeholder="Tu Asunto" required>
+                    </div>  
+                    <div class="formulario__campo">
+                        <label for="email" class="formulario__label">E-mail</label>
+                        <input type="email" class="formulario__input" id="email" placeholder="Tu E-mail" required>
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="telefono" class="formulario__label">Teléfono</label>
+                        <input type="tel" class="formulario__input" id="telefono" placeholder="Tu Teléfono" required>
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="mensaje" class="formulario__label">Mensaje</label>
+                        <textarea class="formulario__input" id="mensaje" cols="30" rows="10"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset class="formulario__fieldset">
+                    <legend class="formulario__legend">País</legend>
+                    <div class="formulario__campo">
+                        <label for="pais" class="formulario__label">País</label>
+                        <select id="pais" class="formulario__select" required>
+                            <option value="" disabled selected>--Seleccionar--</option>
+                            <option value="MX">México</option>
+                            <option value="PR">Perú</option>
+                            <option value="CO">Colombia</option>
+                            <option value="AR">Argentina</option>
+                            <option value="ES">España</option>
+                            <option value="CL">Chile</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="formulario__fieldset">
+                    <legend class="formulario__legend">Informacion Extra</legend>
+                    <div class="formulario__radio">
+                        <label for="cliente" class="formulario__label">Cliente</label>
+                        <input class="formulario__input" type="radio" name="tipo" id="cliente" value="cliente" required>
+                    </div>
+                    <div class="formulario__radio">
+                        <label for="proveedor " class="formulario__label">Proveedor </label>
+                        <input class="formulario__input" type="radio" name="tipo" id="proveedor" value="proveedor" required>
+                    </div>
+                    <div class="formulario__datalist">
+                        <label for="categoria" class="formulario__label">Categoría de Interés</label>
+                        <input list="categorias" name="categorias" class="formulario__input--datalist">
+                        <datalist id="categorias">
+                            <option value="Cocina"></option>
+                            <option value="Exterior"></option>
+                            <option value="Recamaras"></option>
+                            <option value="Oficina"></option>
+                            <option value="Televisión"></option>
+                        </datalist>
+                    </div>
+                </fieldset>
+                <input type="submit" class="boton max-width-30" value="Enviar formulario">
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid contenedor">
+            <div class="site-footer-seccion">
+                <h3 class="site-footer-seccion__titulo">Categorías</h3>
+                <nav class="site-footer-seccion__menu">
+                    <a href="#" class="site-footer-seccion__enlace">Cocina</a>
+                    <a href="#" class="site-footer-seccion__enlace">Oficina</a>
+                    <a href="#" class="site-footer-seccion__enlace">Jardin</a>
+                    <a href="#" class="site-footer-seccion__enlace">Cochera</a>
+                    <a href="#" class="site-footer-seccion__enlace">Dormitorios</a>
+                </nav>
+            </div>
+            <div class="site-footer-seccion">
+                <h3 class="site-footer-seccion__titlo">Sobre Nosotros</h3>
+                <nav class="site-footer-seccion__menu">
+                    <a href="#" class="site-footer-seccion__enlace">Nuestra Historia</a>
+                    <a href="#" class="site-footer-seccion__enlace">Misión, Visión y Valores</a>
+                    <a href="#" class="site-footer-seccion__enlace">Carreras</a>
+                    <a href="#" class="site-footer-seccion__enlace">Política de Privacidad</a>
+                    <a href="#" class="site-footer-seccion__enlace">Términos de Servicio</a>
+                </nav>
+            </div>
+            <div class="site-footer-seccion">
+                <h3 class="site-footer-seccion__titulo">Soporte</h3>
+                <nav class="site-footer-seccion__menu">
+                    <a href="#" class="site-footer-seccion__enlace">Preguntas Frecuentes</a>
+                    <a href="#" class="site-footer-seccion__enlace">Ayuda en Línea</a>
+                    <a href="#" class="site-footer-seccion__enlace">Confianza y Seguridad</a>
+                </nav>
+            </div>
+        </div>
+
+        <p class="site-footer__copyright"> Tienda Mueble - Todos los derechos reservados &copy; 2023</p>
+    </footer>
 </body>
+</html>
 </html>
