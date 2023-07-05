@@ -1,0 +1,13 @@
+/*Que inicie*/
+a[href^="http"]{
+    color: cadetblue;
+}
+
+/*Que termine*/
+a[href$="net"]{
+    color: crimson;
+}
+
+input[type="tel"]{
+    border: 0.2rem solid blue;
+}

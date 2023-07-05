@@ -1,0 +1,13 @@
+/*Los ID tiene mayor especificidad que los selectores de clases*/
+#encabezado{
+    text-transform: uppercase;
+    color: maroon;
+}
+
+.texto{
+    color: crimson;
+}
+
+#encabezado.texto{
+    color: blue;
+}

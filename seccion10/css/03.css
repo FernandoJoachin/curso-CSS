@@ -1,0 +1,25 @@
+.texto{
+    background-color: crimson;
+    padding: 1rem;
+}
+
+.blanco{
+    color: white;
+}
+
+.mayusculas{
+    text-transform: uppercase;
+}
+
+/*.texto.mayusculas y .texto .mayusculas son diferentes*/
+.texto.mayusculas{
+    font-size: 10rem;
+}
+
+.texto .mayusculas{
+    color: yellow;
+}
+
+.texto.blanco{
+    border-radius: 1rem;
+}

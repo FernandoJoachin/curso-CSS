@@ -1,0 +1,5 @@
+.admin > div{
+    border: 0.3rem solid crimson;
+    padding: 2rem;
+    border-radius: 1rem;
+}

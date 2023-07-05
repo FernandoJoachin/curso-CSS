@@ -1,0 +1,9 @@
+/*.header .descripcion tiene mayor especificidad (0,2,0) 
+a comparación de .descripcion (0,1,0)*/
+.header .descripcion{
+    color: green;
+}
+
+.descripcion{
+    color: grey;
+}

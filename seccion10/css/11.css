@@ -1,0 +1,12 @@
+/*2 Formas de hacerlo*/
+ul li:first-child{
+    background-color: crimson;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+ul li:first-of-type{
+    background-color: yellowgreen;
+    padding: 2rem;
+    border-radius: 1rem;
+}

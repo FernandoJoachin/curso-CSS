@@ -1,0 +1,15 @@
+/*Impares*/
+ul li:nth-child(odd){
+    background-color: crimson;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+/*Pares*/
+ul li:nth-child(even){
+    background-color: yellowgreen;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}

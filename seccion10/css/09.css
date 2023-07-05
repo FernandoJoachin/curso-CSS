@@ -1,0 +1,11 @@
+.admin > p{
+    background-color: violet;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.admin div + p{
+    background-color: brown;
+    padding: 2rem;
+    border-radius: 1rem;
+}
