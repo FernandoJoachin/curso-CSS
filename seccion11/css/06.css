@@ -1,0 +1,26 @@
+/*Media queries estándar*/
+
+/*Dispositivo móvil*/
+@media (min-width: 550px) {
+    
+}
+
+/*Tablet*/
+@media (min-width: 768px) {
+    
+}
+
+/*Landscape*/
+@media (min-width: 1024px) {
+    
+}
+
+/*Laptop*/
+@media (min-width: 1200px) {
+    
+}
+
+/*Monitor muy grande o Televisión*/
+@media (min-width: 1600px) {
+    
+}

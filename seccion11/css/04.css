@@ -1,0 +1,35 @@
+.oferta{
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.precio{
+    font-size: 4rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px), (min-width: 1140px){
+    .oferta{
+        background-color: cadetblue;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    .precio{
+        font-size: 5rem;
+    }
+}
+
+/*Nota: No se aplica los estilos puestos en el @media que tiene el AND*/
+@media (min-width: 1024px){
+    .oferta{
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    .precio{
+        font-size: 5rem;
+    }
+}

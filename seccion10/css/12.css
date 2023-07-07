@@ -1,0 +1,12 @@
+/*2 Formas de hacerlo*/
+ul li:last-child{
+    background-color: crimson;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+ul li:last-of-type{
+    background-color: yellowgreen;
+    padding: 2rem;
+    border-radius: 1rem;
+}

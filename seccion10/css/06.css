@@ -1,0 +1,11 @@
+div.texto{
+    background-color: greenyellow;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.texto{
+    background-color: crimson;
+    padding: 1rem;
+    border-radius: 1rem;
+}

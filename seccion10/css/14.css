@@ -1,0 +1,4 @@
+/*Selecciona todos excepto*/
+p:not(.texto):not(.oferta){
+    color: crimson;
+}

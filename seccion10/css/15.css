@@ -1,0 +1,9 @@
+.primer-letra::first-letter{
+    font-size: 10rem;
+    font-style: italic;
+}
+
+.primer-linea::first-line{
+    font-size: 5rem;
+    font-weight: bold;
+}

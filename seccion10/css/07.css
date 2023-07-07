@@ -1,0 +1,5 @@
+.texto, .oferta{
+    border: 0.3rem solid orangered;
+    padding: 2rem;
+    border-radius: 1rem;
+}
