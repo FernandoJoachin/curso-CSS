@@ -1,0 +1,256 @@
+/*Variables*/
+:root{
+    --primario: #1073BA;
+    --secundario: #00DA55;
+
+    --negro: #1a1b15;
+    --blanco: #FFFFFF;
+    --gris: #3B3B3B;
+    --gris-claro: #e1e1e1;
+    --gris-oscuro: #1E293B;
+
+    --fuenteHeading: 'Lato', sans-serif;
+    --fuenteParrafos: 'Roboto', sans-serif;
+}
+
+/*Globales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: var(--blanco);
+}
+
+h1, h2, h3{
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+    font-weight: 900;
+    margin: calc(5rem / 2) 0;
+}
+
+h1{
+    font-size: 4.4rem;
+}
+
+h2{
+    font-size: 3.6rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--negro);
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/*Utilidades*/
+.contenedor{
+    width: min(95%, 120rem);
+    margin: 0 auto;
+}
+
+.contenedor-md{
+    width: min(95%, 80rem);
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.degradado{
+    color: transparent;
+    background: linear-gradient(to right, var(--primario) 0%, var(--secundario) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/*Header*/
+.header{
+    background-color: var(--negro);
+    padding: 15rem 0;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) and (max-width: 1200px){
+    .header__imagen img{
+        height: 35rem;
+    }
+}
+
+@media (min-width: 768px){
+    .header__contenido{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+.producto{
+    text-align: center;
+    padding-top: 5rem;
+}
+
+@media (min-width: 768px){
+    .producto{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+        padding: 0;
+    }
+}
+
+.producto p{
+    margin: 0;
+}
+
+.producto__tagline{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.producto__titulo{
+    font-size: 6rem;
+    margin: 0;
+}
+
+@media (min-width: 768px){
+    .producto__titulo{
+        font-size: 10rem;
+        line-height: 1;
+    }
+}
+
+.producto__precio--span{
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+/*Iconos*/
+.iconos{
+    padding: 5rem 0;
+}
+
+@media (min-width: 768px){
+    .iconos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+}
+
+.icono{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.icono:last-of-type{
+    margin:0;
+}
+
+@media (min-width: 768px) { 
+    .icono{
+        margin: 0;
+    }
+}
+
+
+.icono__imagen{
+    width: 5rem;
+    margin: 0 auto;
+}
+
+.icono__titulo{
+    color: var(--primario);
+    text-transform: uppercase;
+}
+
+.icono__texto{
+    margin: 0 0 5rem 0;
+}
+
+@media (min-width: 768px){
+    .icono__texto{
+        margin: 0;
+    }
+}
+
+/*sobre-tech*/
+.sobre-tech{
+    background-image: linear-gradient(to bottom, transparent 50%, var(--primario) 50%), url(../img/imagen-mujer.jpg);
+    background-position: center, top right;
+    background-repeat: no-repeat;
+    background-size: 100%, 70rem;
+    padding: 3rem 0 0 3rem;
+}
+
+@media (min-width: 768px){
+    .sobre-tech{
+        background-image: linear-gradient(to left, transparent 50%, var(--primario) 50%), url(../img/imagen-mujer.jpg);
+        background-position: right center;
+        background-size: 100%, 80rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .sobre-tech{
+        padding: 10rem 0;
+        background-size: 100%, 100rem;
+    }
+}
+
+.sobre-tech-grid{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+@media (min-width: 768px){
+    .sobre-tech-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: unset;
+        gap: 10rem;
+    }
+}
+
+.tech{
+    grid-row: 2 / 3;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px){
+    .tech{
+        grid-column: 1 / 2;
+        grid-row: unset;
+    }
+}
+
+.tech__titulo{
+    font-size: 4rem;
+}
+
+.tech__texto{
+    font-size: 2rem;
+    line-height: 2;
+}
+
