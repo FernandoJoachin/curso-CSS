@@ -13,6 +13,8 @@
 
     <link rel="preload" href="/css/style.css" as="style">
     <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="header">
@@ -29,9 +31,9 @@
                      type="image/webp">
                     <source
                      sizes="1920w" 
-                     srcset="/img/header.jpg 1920w" 
-                     type="image/jpeg">
-                    <img loading="lazy" width="500" height="300" decoding="async" src="/img/header.jpg" lazyalt="imagen">
+                     srcset="/img/header.png 1920w" 
+                     type="image/png">
+                    <img loading="lazy" width="500" height="300" decoding="async" src="/img/header.png" lazyalt="imagen">
                 </picture>
             </div>
             <div class="producto">
@@ -77,8 +79,8 @@
         </div>
     </section>
 
-    <main class="listado-modelos">
-        <h2 class="text-center degradado">Elige tu TechPRO</h2>
+    <main class="listado-modelos contenedor">
+        <h2 class="listado-modelos__titulo text-center degradado">Elige tu TechPRO</h2>
         <div class="modelos">
             <div class="modelo modelo--x">
                 <h3 class="modelo__titulo">TechPRO X</h3>
@@ -88,11 +90,48 @@
                 <h3 class="modelo__titulo">TechPRO Y</h3>
                 <p class="modelo__precio">$399</p>
             </div>
-            <div class="modelo modelo--Z">
+            <div class="modelo modelo--z">
                 <h3 class="modelo__titulo">TechPRO Z</h3>
                 <p class="modelo__precio">$499</p>
             </div>
         </div>
     </main>
+
+    <section class="newsletter-contenedor">
+        <div class="newsletter-contenido contenedor">
+            <div class="newsletter">
+                <h2 class="newsletter__titulo">Recibe actualizaciones</h2>
+                <p class="newsletter__texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, perferendis? Facere obcaecati quo atque necessitatibus beatae voluptatibus, praesentium aliquam cupiditate
+                veritatis labore amet voluptas quas, quia pariatur magni? Veritatis, corrupti.</p>
+
+                <form class="formulario">
+                    <div class="campo">
+                        <input type="text" class="formulario__input" placeholder="Tu email">
+                        <input type="submit" class="formulario__boton" value="Inscribirse">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h1 class="footer__titulo text-center degradado">TechPRO</h1>
+        <div class="footer__sociales">
+            <a href="https://facebook.com" class="footer__social"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com" class="footer__social"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com" class="footer__social"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" class="footer__social"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <ul class="footer__menu">
+            <li class="menu-item">Legal</li>
+            <li class="menu-item">Cookies</li>
+            <li class="menu-item">Privacy</li>
+            <li class="menu-item">Shipping</li>
+            <li class="menu-item">Refounds</li>
+        </ul>
+        <p class="footer__copyright text-center degradado"> TechPRO - Todos los derechos reservados &copy; 2023</p>
+    </footer>
+
+    <script src="/js/img.js"></script>
 </body>
 </html>
