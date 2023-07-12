@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPRO Audífonos</title>
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="header__contenido contenedor">
+            <div class="header__imagen">
+                <picture>
+                    <source
+                     sizes="1920w" 
+                     srcset="/img/header.avif 1920w" 
+                     type="image/avif">
+                    <source
+                     sizes="1920w" 
+                     srcset="/img/header.webp 1920w" 
+                     type="image/webp">
+                    <source
+                     sizes="1920w" 
+                     srcset="/img/header.png 1920w" 
+                     type="image/png">
+                    <img loading="lazy" width="500" height="300" decoding="async" src="/img/header.png" lazyalt="imagen">
+                </picture>
+            </div>
+            <div class="producto">
+                <p class="producto__tagline">Sonido Profesional</p>
+                <h1 class="producto__titulo degradado">TechPRO</h1>
+                <p class="producto__descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam facere nulla quam eos repellendus consequatur. Eaque non ullam, molestias quasi 
+                velit ducimus voluptate! Repellendus odio eum obcaecati omnis, debitis quos.</p>
+                <p class="producto__precio">Desde <span class="producto__precio--span">$299</span></p>
+            </div>
+        </div>
+    </header>
+    
+    <section class="contenedor">
+        <div class="iconos">
+            <div class="icono">
+                <img src="/img/icono-sonido.svg" alt="Imagen sonido" class="icono__imagen">
+                <h3 class="icono__titulo">Gran sonido</h3>
+                <p class="icono__texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptas aliquid, error dolorem labore corporis reprehenderit necessitatibus eveniet assumenda sint quam.
+                Iure minus obcaecati earum alias, perspiciatis a incidunt architecto!</p>
+            </div>
+            <div class="icono">
+                <img src="/img/icono-garantia.svg" alt="Imagen garantia" class="icono__imagen">
+                <h3 class="icono__titulo">Garantía de por vida</h3>
+                <p class="icono__texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptas aliquid, error dolorem labore corporis reprehenderit necessitatibus eveniet assumenda sint quam.
+                Iure minus obcaecati earum alias, perspiciatis a incidunt architecto!</p>
+            </div>
+            <div class="icono">
+                <img src="/img/icono-bateria.svg" alt="Imagen bateria" class="icono__imagen">
+                <h3 class="icono__titulo">+20 horas de bateria</h3>
+                <p class="icono__texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo voluptas aliquid, error dolorem labore corporis reprehenderit necessitatibus eveniet assumenda sint quam.
+                Iure minus obcaecati earum alias, perspiciatis a incidunt architecto!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre-tech">
+        <div class="sobre-tech-grid contenedor">
+           <div class="tech">
+                <h2 class="tech__titulo">Sobre los <span class="tech__titulo--span">TechPRO</span></h2>
+                <p class="tech__texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero porro sint perferendis, veniam tenetur optio nobis beatae expedita maiores a, 
+                quos modi itaque exercitationem, cum praesentium odit provident id ullam?</p>
+           </div>
+        </div>
+    </section>
+
+    <main class="listado-modelos contenedor">
+        <h2 class="listado-modelos__titulo text-center degradado">Elige tu TechPRO</h2>
+        <div class="modelos">
+            <div class="modelo modelo--x">
+                <h3 class="modelo__titulo">TechPRO X</h3>
+                <p class="modelo__precio">$299</p>
+            </div>
+            <div class="modelo modelo--y">
+                <h3 class="modelo__titulo">TechPRO Y</h3>
+                <p class="modelo__precio">$399</p>
+            </div>
+            <div class="modelo modelo--z">
+                <h3 class="modelo__titulo">TechPRO Z</h3>
+                <p class="modelo__precio">$499</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="newsletter-contenedor">
+        <div class="newsletter-contenido contenedor">
+            <div class="newsletter">
+                <h2 class="newsletter__titulo">Recibe actualizaciones</h2>
+                <p class="newsletter__texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, perferendis? Facere obcaecati quo atque necessitatibus beatae voluptatibus, praesentium aliquam cupiditate
+                veritatis labore amet voluptas quas, quia pariatur magni? Veritatis, corrupti.</p>
+
+                <form class="formulario">
+                    <div class="campo">
+                        <input type="text" class="formulario__input" placeholder="Tu email">
+                        <input type="submit" class="formulario__boton" value="Inscribirse">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h1 class="footer__titulo text-center degradado">TechPRO</h1>
+        <div class="footer__sociales">
+            <a href="https://facebook.com" class="footer__social"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com" class="footer__social"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com" class="footer__social"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" class="footer__social"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <ul class="footer__menu">
+            <li class="menu-item">Legal</li>
+            <li class="menu-item">Cookies</li>
+            <li class="menu-item">Privacy</li>
+            <li class="menu-item">Shipping</li>
+            <li class="menu-item">Refounds</li>
+        </ul>
+        <p class="footer__copyright text-center degradado"> TechPRO - Todos los derechos reservados &copy; 2023</p>
+    </footer>
+
+    <script src="/js/img.js"></script>
+</body>
+</html>
