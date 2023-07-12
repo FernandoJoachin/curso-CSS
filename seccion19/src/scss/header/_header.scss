@@ -1,0 +1,63 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.header{
+    padding: 5rem 0;
+    position: relative;
+
+    @include mxn.tablet{
+        min-height: 70rem;
+    }
+
+    &--inicio{
+        background-image: url(../img/header_inicio.jpg);
+    }
+    
+    &::before{
+        content: "";
+        background-color: vr.$negro;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.5;
+    }
+
+    &__contenido{
+        position: relative;
+    }
+
+    &__barra{
+        display: flex;
+        flex-direction: column;
+
+        @include mxn.tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__logo{
+        width: 50%;
+        margin: 0 auto;
+
+        @include mxn.tablet{
+            width: 20rem;
+            margin: 0;
+        }
+    }
+
+    &__texto{
+        text-align: center;
+        color: vr.$blanco;
+        text-transform: uppercase;
+        margin-top: vr.$separacion;
+
+
+        @include mxn.tablet{
+            margin-top: calc(vr.$separacion * 2);
+        }
+    }
+}
