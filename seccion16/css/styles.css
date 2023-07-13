@@ -14,7 +14,7 @@ html {
 body {
     font-family: var(--fuentePrincipal);
     font-size: 1.6rem;
-    line-height: 1.8;
+    line-height: 1.5;
 }
 h1, h2, h3 {
     font-weight: 900;
@@ -103,7 +103,7 @@ img {
 }
 
 .header__titulo{
-    font-size: 3rem;
+    font-size: clamp(2rem, -0.8rem + 10vw, 3rem);
     line-height: 1.2;
     margin-bottom: 3rem;
 }
@@ -166,6 +166,10 @@ img {
     margin-top: 3rem;
 }
 
+.nucleus__titulo{
+    font-size: clamp(3.6rem, -0.8rem + 10vw, 4.6rem);
+}
+
 .nucleus__grid{
     display: flex;
     flex-direction: column-reverse;
@@ -216,7 +220,7 @@ img {
 
 .listado__titulo{
     color: var(--primario);
-    font-size: 3rem;
+    font-size: clamp(2rem, -0.8rem + 10vw, 3rem);
     margin: 0;
     text-align: left;
 }
@@ -239,7 +243,7 @@ img {
 
 .listado__texto{
     margin: 0;
-    font-size: 2rem;
+    font-size: clamp(1rem, -0.8rem + 10vw, 2rem);
 }
 
 /*Seguridad*/
@@ -272,6 +276,7 @@ img {
 }
 
 .seguridad__titulo{
+    font-size: clamp(3.6rem, -0.8rem + 10vw, 4.6rem);
     color: var(--blanco);
 }
 
@@ -285,6 +290,9 @@ img {
 }
 
 /*Comisiones*/
+.comisiones__titulo{
+    font-size: clamp(3.2rem, -0.8rem + 10vw, 4.6rem);
+}
 @media (min-width: 768px){
     .comisiones__grid{
         display: grid;
@@ -302,7 +310,7 @@ img {
 
 .comisiones__texto{
     text-align: center;
-    font-size: 2.4rem;
+    font-size: clamp(2rem, -0.8rem + 10vw, 2.4rem);
     font-weight: bold;
 }
 
@@ -319,6 +327,7 @@ img {
 }
 
 .testimoniales__titulo{
+    font-size: clamp(2.5rem, -0.8rem + 10vw, 4.6rem);
     color: var(--blanco);
 }
 
