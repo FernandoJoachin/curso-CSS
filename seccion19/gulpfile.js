@@ -59,4 +59,4 @@ exports.dev = dev;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.default = series(imagenes,versionWebp,versionAvif,css,dev)
+exports.default = parallel(imagenes,versionWebp,versionAvif,css,dev)

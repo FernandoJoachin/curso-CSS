@@ -1,0 +1,42 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.testimoniales{
+    padding: 10rem 2rem;
+    margin-top: -10rem;
+    background-color: vr.$blanco;
+
+    @include mxn.tablet{
+        padding: 10rem;
+    }
+
+    &__titulo{
+        color: vr.$primario;
+        @include mxn.texto-fluido(2rem, 4rem);
+
+        &::after{
+            content: "";
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            background-image: url(../img/cafe.svg);
+            background-size: 10rem;
+        }
+    }
+}
+
+.testimonial{
+    background-color: vr.$cafe-claro;
+    padding: 2rem 4rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+
+    &__autor{
+        text-align: right;
+        font-size: 2.2rem;
+        color: vr.$primario;
+        font-family: vr.$fuente_cursiva;
+    }
+}

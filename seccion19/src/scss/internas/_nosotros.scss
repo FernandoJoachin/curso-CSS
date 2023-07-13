@@ -1,0 +1,62 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.nosotros{
+    &__titulo{
+        @include mxn.texto-fluido(2rem, 4rem);
+        color: vr.$primario;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            background-image: url(../img/cafe.svg);
+            background-size: 10rem;
+        }
+    }
+
+    &__contenido{
+        @include mxn.tablet{
+            @include mxn.grid(2,vr.$separacion);
+            align-items: center;
+        }
+    }
+
+    &__imagen{
+        margin-bottom: vr.$separacion;
+
+        @include mxn.tablet{
+            margin-bottom: 0;
+
+            img{
+                height: 50rem;
+                object-fit: cover;
+            }
+        }
+
+        @include mxn.desktop{
+            img{
+                height: auto;
+            }
+        }
+
+        img{
+            transform: rotate(-6deg);
+            border: 3rem solid vr.$blanco;
+            box-shadow: 9px 10px 5px -7px rgb(0 0 0 / 0.35);
+        }
+    }
+
+    &__descripcion{
+        text-align: left;
+    }
+
+    &__blockquote{
+        margin: 0;
+        padding: 1rem;
+        border-left: 0.5rem solid vr.$primario;
+        font-size: 2rem;
+    }
+}

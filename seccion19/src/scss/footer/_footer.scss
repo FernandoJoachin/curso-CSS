@@ -1,0 +1,88 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.footer{
+    background-color: vr.$primario;
+    &__info{
+        background-color: vr.$blanco;
+        padding: 5rem;
+
+        @include mxn.tablet{
+            @include mxn.grid(3,2rem);
+        }
+    }
+
+    &__logo{
+        width: 30%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        @include mxn.telefono{
+            width: 10rem;
+        }
+    }
+
+    &__contenido{
+        margin-top: vr.$separacion;
+        color: vr.$blanco;
+        text-align: center;
+    }
+
+    &__sociales{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin: 3rem 0;
+    }
+    
+    &__social{
+        color: var(--blanco);
+        font-size: 2rem;
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--blanco);
+        margin-top: 3rem;
+        gap: 3rem;
+
+        @include mxn.tablet{
+            display: flex;
+            flex-direction: row;
+            padding-right: 0;
+            justify-content: center;
+        }
+    }
+
+    &__copyright{
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding: 3rem 0;
+        margin: 0;
+    }
+}
+
+.footer-box{
+    font-family: vr.$fuente_cursiva;
+    text-align: center;
+    margin-bottom: vr.$separacion;
+
+    @include mxn.tablet{
+        margin-bottom: 0;
+    }
+
+    &__titulo{
+        font-family: vr.$fuente_cursiva;
+        margin: 0 0 1rem 0;
+        font-size: 2.4rem;
+        color: vr.$secundario;
+    }
+
+    &__texto,&__enlace{
+        font-size: 2rem;
+    }
+}

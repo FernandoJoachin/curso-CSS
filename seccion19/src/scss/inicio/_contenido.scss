@@ -1,0 +1,31 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.contenido-principal{
+    background-color: vr.$blanco;
+    padding: 5rem;
+
+    @include mxn.tablet{
+        padding: 10rem;
+        margin-top: -10rem;
+        position: relative;
+    }
+}
+
+.conoce{
+    &__titulo{
+        @include mxn.texto-fluido(2rem, 4rem);
+        color: vr.$primario;
+        margin-bottom: 3rem;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            background-image: url(../img/cafe.svg);
+            background-size: 10rem;
+        }
+    }
+}

@@ -4,7 +4,7 @@
   "description": "Aprendiendo SASS,Gulp, CSS Grid",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp dev"
   },
   "author": "Fernando Joachin Prieto",
   "license": "ISC",

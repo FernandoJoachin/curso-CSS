@@ -1,4 +1,4 @@
-@use "base/variables" as vr;
+@use "variables" as vr;
 
 /**Media Queries**/
 @mixin telefono{
@@ -17,4 +17,36 @@
     @media (min-width: vr.$desktop){
         @content;
     }
+}
+
+@mixin titulo{
+    font-family: vr.$fuente_principal;
+    font-weight: 900;
+    margin: 2rem 0;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+@mixin nombre-pagina{
+    @include titulo;
+    margin: 0 0 vr.$separacion 0;
+    text-align: center;
+}
+
+@mixin descripcion-pagina{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+    line-height: 2;
+}
+
+@mixin grid($columnas, $espaciado){
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin texto-fluido($min, $max){
+    font-size: clamp($min, -0.8rem + 10vw, $max);
 }

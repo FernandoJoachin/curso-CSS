@@ -1,0 +1,28 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.iconos{
+    margin-top: vr.$separacion;
+    
+    &__listado{
+        @include mxn.tablet{
+            @include mxn.grid(3, 4rem);
+        }
+    }
+}
+
+.icono{
+    margin-top: 5rem;
+
+    &__imagen{
+        margin: 0 auto;
+        width: 12rem;
+    }
+
+    &__texto{
+        font-family: vr.$fuente_cursiva;
+        @include mxn.texto-fluido(1.8rem, 3.2rem);
+        color: vr.$primario;
+        text-align: center;
+    }
+}
