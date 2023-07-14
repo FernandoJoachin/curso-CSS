@@ -1,0 +1,70 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.nuestro-menu{
+    background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), linear-gradient(to top, vr.$primario, vr.$primario);
+    background-repeat: no-repeat;
+    background-position: center 5rem, center 96%, 100%;
+    background-size: 200%;
+    padding: 15rem 2rem 20rem 2rem;
+
+    @include mxn.tablet{
+        background-position: center 5rem, center 92%, 100%;
+        padding: 15rem 0rem 20rem 0rem;
+        background-size: 100%;
+    }
+
+    @include mxn.desktop{
+        background-size: 50%, 50%, 100%;
+    }
+
+    &__titulo{
+        color: vr.$blanco;
+        @include mxn.texto-fluido(2rem, 4rem);
+
+        span{
+            color: vr.$blanco;
+        }
+
+        &::after{
+            display: none;
+        }
+    }
+
+    &__grid{
+        @include mxn.tablet{
+            @include mxn.grid(2,4rem);
+        }
+    }
+}
+
+.menu{
+    &__titulo{
+        color: vr.$blanco;
+    }
+}
+
+.producto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__descripcion{
+        color: vr.$blanco;
+        line-height: 1.5;
+        font-size: 2rem;
+        text-align: left;
+        margin: 0 0 2rem 0;
+
+        span{
+            display: block;
+            color: vr.$secundario;
+        }
+    }
+
+    &__precio{
+        font-size: 4rem;
+        font-weight: bold;
+        color: vr.$blanco;
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "seccion19",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS,Gulp, CSS Grid",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev"
+  },
+  "author": "Fernando Joachin Prieto",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.4.25",
+    "sass": "^1.63.6"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
+}

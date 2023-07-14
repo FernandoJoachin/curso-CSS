@@ -1,0 +1,41 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    margin-top: vr.$separacion;
+
+    @include mxn.tablet{
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    &__enlace{
+        text-align: center;
+        color: vr.$blanco;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        @include mxn.tablet{
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        @include mxn.desktop{
+            font-size: 2rem;
+        }
+
+        &:hover{
+            color: vr.$secundario;
+        }
+
+        &--activo{
+            color: vr.$secundario;
+        }
+    }
+
+}

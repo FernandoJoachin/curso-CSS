@@ -1,0 +1,154 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.galeria{
+    margin-top: vr.$separacion;
+
+    &__titulo{
+        @include mxn.texto-fluido(2rem, 4rem);
+        color: vr.$primario;
+        margin-bottom: 3rem;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            background-image: url(../img/cafe.svg);
+            background-size: 10rem;
+        }
+    }
+
+    &__contenido{
+        @include mxn.grid(2,2rem);
+
+        @include mxn.tablet{
+            @include mxn.grid(3,2rem);
+        }
+
+        @include mxn.desktop{
+            @include mxn.grid(4,2rem);
+        }
+    }
+
+    &__imagen{
+        img{
+            height: 30rem;
+            width: 30rem;
+            object-fit: cover;
+        }
+
+        @include mxn.tablet{
+            &:nth-child(1){
+                grid-row: 1 / 3;
+
+                img{
+                    height: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(2){
+                grid-column: 2 / 4;
+
+                img{
+                    width: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(4){
+                grid-row: 2 / 4;
+
+                img{
+                    height: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(8){
+                grid-column: 2 / 4;
+
+                img{
+                    width: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(9){
+                grid-column: 1 / 3;
+
+                img{
+                    width: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(10){
+                grid-column: 3 / 4;
+
+                img{
+                    width: 32rem;
+                    object-position: center;
+                }
+            }
+        }
+
+        @include mxn.desktop{
+            &:nth-child(5){
+                grid-column: 3 / 5;
+
+                img{
+                    width: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(6){
+                grid-column: 3 / 5;
+
+                img{
+                    width: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(7){
+                grid-row: 3 / 5;
+
+                img{
+                    height: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(8){
+                grid-column: 2 / 5;
+
+                img{
+                    width: 94rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(9){
+                grid-column: 1 / 3;
+
+                img{
+                    width: 62rem;
+                    object-position: center;
+                }
+            }
+
+            &:nth-child(10){
+                grid-column: 3 / 5;
+
+                img{
+                    width: 62rem;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
