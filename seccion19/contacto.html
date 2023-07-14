@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería SASS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="/build/css/app.css" as="style">
+    <link rel="stylesheet" href="/build/css/app.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <header class="header header--contacto">
+        <div class="header__contenido contenedor">
+            <div class="header__barra">
+                <div class="header__logo">
+                    <img src="/build/img/logo.svg" alt="Imagen logo">
+                </div>
+
+                <nav class="navegacion">
+                    <a href="/index.html" class="navegacion__enlace">Inicio</a>
+                    <a href="/nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="/proceso.html" class="navegacion__enlace">Proceso</a>
+                    <a href="/menu.html" class="navegacion__enlace">Menu</a>
+                    <a href="/galeria.html" class="navegacion__enlace">Galería</a>
+                    <a href="/contacto.html" class="navegacion__enlace navegacion__enlace--activo">Contacto</a>
+                </nav>
+            </div>
+            <div>
+                <h1 class="header__texto">Mejor granos, mejor café</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenido-principal contenedor">
+        <div class="contacto">
+            <h2 class="contacto__titulo"><span>Reserva tu</span>mesa</h2>
+            <div class="contacto__contenido">
+                <form class="formulario">
+                    <div class="formulario__campo">
+                        <label for="nombre" class="formulario__label">Nombre</label>
+                        <input type="text" class="formulario__input" id="nombre" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="email" class="formulario__label">E-mail</label>
+                        <input type="email" class="formulario__input" id="email" placeholder="Tu E-mail" required>
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="personas" class="formulario__label">Número de personas</label>
+                        <select id="personas" class="formulario__select" required>
+                            <option value="" disabled selected>--Seleccionar--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="mas">4+</option>
+                        </select>
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="hora" class="formulario__label">Hora:</label>
+                        <input type="time" class="formulario__input" id="hora" min="09:00" max="18:00">
+                    </div>
+                    <div class="formulario__campo">
+                        <label for="fecha" class="formulario__label">Fecha:</label>
+                        <input type="date" class="formulario__input" id="fecha">
+                    </div>
+                    <div class="formulario__campo">
+                        <input type="submit" class="formulario__boton" value="Enviar formulario">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__info contenedor">
+            <div class="footer-box footer-box--ubicacion">
+                <h3 class="footer-box__titulo">Ubicación</h3>
+                <p class="footer-box__texto">Paseo de Montejo 5990</p>
+                <p class="footer-box__texto">Mérida, Yucatán</p>
+            </div>
+            <div class="footer-box footer__box--reservacion">
+                <h3 class="footer-box__titulo">Reservación</h3>
+                <p class="footer-box__texto">Tel. 3850-8102</p>
+                <a href="tel:+3850-8102" class="footer-box__enlace">Llamar</a>
+            </div>
+            <div class="footer-box footer__box--horario">
+                <h3 class="footer-box__titulo">Horario</h3>
+                <p class="footer-box__texto">Lun-Jue: 11:00 - 22:00</p>
+                <p class="footer-box__texto">Vie-Sab: 09:00 - 24:00</p>
+                <p class="footer-box__texto">Domingo: Cerrado</p>
+            </div>
+        </div>
+       <div class="footer__contenido">
+            <div class="footer__logo">
+                <img src="/build/img/logo.svg" alt="Imagen logo">
+            </div>
+            <div class="footer__sociales">
+                <a href="https://facebook.com" class="footer__social"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" class="footer__social"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://instagram.com" class="footer__social"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tiktok.com" class="footer__social"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <ul class="footer__menu">
+                <li class="menu-item">Legal</li>
+                <li class="menu-item">Cookies</li>
+                <li class="menu-item">Privacy</li>
+                <li class="menu-item">Shipping</li>
+                <li class="menu-item">Refounds</li>
+            </ul>
+            <p class="footer__copyright text-center degradado"> La Cafetería - Todos los derechos reservados &copy; 2023</p>
+       </div>
+    </footer>
+</body>
+</html>

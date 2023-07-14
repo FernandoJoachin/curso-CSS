@@ -1,0 +1,69 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.contacto{
+    &__titulo{
+        @include mxn.texto-fluido(2rem, 4rem);
+        color: vr.$primario;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            background-image: url(../img/cafe.svg);
+            background-size: 10rem;
+        }
+    }
+    
+    &__contenido{
+        @include mxn.tablet{
+            @include mxn.grid(2,vr.$separacion);
+            background-image: url(../img/granos_cafe.jpg);
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 40%;
+        }
+    }
+}
+
+.formulario{
+    &__campo{
+        margin-bottom: 2rem;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+
+    &__label{
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    &__input, &__select{
+        width: 100%;
+        padding: 1rem;
+        border: 0.3rem solid vr.$primario;
+        border-radius: 0.5rem;
+    }
+
+    &__boton{
+        background-color: vr.$primario;
+        width: 100%;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        color: vr.$blanco;
+        font-size: 2.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

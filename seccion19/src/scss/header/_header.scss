@@ -8,7 +8,7 @@
     background-size: cover;
 
     @include mxn.tablet{
-        min-height: 70rem;
+        min-height: 65rem;
     }
 
     &--inicio{
@@ -17,6 +17,22 @@
 
     &--nosotros{
         background-image: url(../img/header_nosotros.jpg);
+    }
+
+    &--proceso{
+        background-image: url(../img/header_proceso.jpg);
+    }
+
+    &--menu{
+        background-image: url(../img/header_menu.jpg);
+    }
+
+    &--galeria{
+        background-image: url(../img/header_galeria.jpg);
+    }
+
+    &--contacto{
+        background-image: url(../img/header_contacto.jpg);
     }
     
     &::before{
@@ -27,7 +43,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        opacity: 0.5;
+        opacity: 0.6;
     }
 
     &__contenido{

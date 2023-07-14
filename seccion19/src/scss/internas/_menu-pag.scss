@@ -1,0 +1,38 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.menu-pag{
+    &__titulo{
+        @include mxn.texto-fluido(2rem, 4rem);
+        color: vr.$primario;
+
+        &::after{
+            content: "";
+            display: block;
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            background-image: url(../img/cafe.svg);
+            background-size: 10rem;
+        }
+    }
+
+    &__contenido{
+        background-image: url(../img/cafe.jpg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100%;
+        aspect-ratio: 3 / 5.7;
+
+        @include mxn.telefono{
+            aspect-ratio: 4 / 5;
+        }
+
+        @include mxn.tablet{
+            @include mxn.grid(2,vr.$separacion);
+            aspect-ratio: 16 / 6;
+            background-size: 50%;
+            background-position: 100% bottom;
+        }
+    }
+}
