@@ -37,7 +37,7 @@
     }
     
     &__social{
-        color: var(--blanco);
+        color: vr.$blanco;
         font-size: 2rem;
     }
 
@@ -46,7 +46,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: var(--blanco);
+        color: vr.$blanco;
         margin-top: 3rem;
         gap: 3rem;
 
