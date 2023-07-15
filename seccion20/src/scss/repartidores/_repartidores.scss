@@ -1,0 +1,44 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.repartidores{
+    padding: vr.$separacion 0;
+
+    &__titulo{
+        text-align: center;
+        color: vr.$secundario;
+    }
+
+    &__grid{
+        @include mxn.desktop{
+            @include mxn.grid(2, vr.$separacion);
+        }
+    }
+
+    &__repartidor{
+        height: auto;
+        width: auto;
+    }
+
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 1rem 3rem;
+
+        @include mxn.desktop{
+            padding: 0
+        }
+    }
+
+    &__texto{
+        line-height: 1.5;
+        color: vr.$secundario;
+    }
+
+    &__enlace{
+        @include mxn.boton(vr.$primario,vr.$blanco);
+        width: auto;
+    }
+}

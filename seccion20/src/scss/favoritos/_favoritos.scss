@@ -1,0 +1,91 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.favoritos{
+    background-color: vr.$grisClaro;
+    padding: vr.$separacion 0;
+
+    &__titulo{
+        text-align: center;
+        color: vr.$secundario;
+    }
+
+    &__grid{
+        @include mxn.tablet{
+            @include mxn.grid(2,4rem);
+        }
+    }
+}
+
+.favorito{
+    background-color: vr.$blanco;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    box-shadow:  rgba(0, 0, 0, 0.25) 0px 0px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+
+    @include mxn.tablet{
+        margin-bottom: 0;
+        transition-property: transform;
+        transition-duration: 0.3s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &__grid{
+        @include mxn.tablet{
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @include mxn.desktop{
+            grid-template-columns: 1fr 3fr;
+            gap: 4rem;
+        }
+    }
+
+    &__imagen{
+        max-width: 20rem;
+        margin: 0 auto 2rem auto;
+    }
+
+    &__logo{
+        height: auto;
+    }
+
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mxn.desktop{
+            align-items: flex-start;
+        }
+    }
+
+    &__nombre{
+        color: vr.$primario;
+        font-size: 2.4rem;
+        margin: 1rem 0;
+    }
+
+    &__descripcion{
+        color: vr.$secundario;
+        font-size: 1.6rem;
+        text-align: center;
+        margin: 0.5rem 0;
+        line-height: 1.5;
+
+        @include mxn.tablet{
+            text-align: left;
+        }
+    }
+}
