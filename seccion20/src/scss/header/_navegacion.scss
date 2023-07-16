@@ -1,0 +1,25 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+
+    @include mxn.desktop{
+        flex-direction: row;
+        width: auto;
+    }
+
+    &__enlace{
+        color: vr.$negro;
+        font-size: 2rem;
+        font-weight: bold;
+
+        &--registrar{
+            @include mxn.boton(vr.$primario, vr.$blanco);
+        }
+    }
+}

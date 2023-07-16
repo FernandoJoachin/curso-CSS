@@ -1,0 +1,76 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.proceso{
+    margin-bottom: vr.$separacion;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    &:nth-child(even){
+        .proceso__texto{
+            order: -1;
+        }
+
+        .proceso__imagen{
+            img{
+                transform: rotate(6deg);
+            }
+        }
+    }
+
+    @include mxn.tablet{
+        display: flex;
+        gap: vr.$separacion;
+        align-items: center;
+    }
+
+    &__texto, &__imagen{
+        flex: 1;
+    }
+
+    &__imagen{
+        @include mxn.tablet{
+            margin-bottom: 0;
+
+            img{
+                height: 30rem;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @include mxn.desktop{
+            img{
+                height: auto;
+            }
+        }
+        img{
+            transform: rotate(-6deg);
+            border: 3rem solid vr.$blanco;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+    }
+
+    &__titulo{
+        @include mxn.texto-fluido(2rem, 2.5rem);
+        color: vr.$primario;
+        text-align: left;
+        margin-top: vr.$separacion;
+        margin-bottom: 0;
+
+        @include mxn.tablet{
+            margin-top: 0;
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            width: 50%;
+            height: 0.2rem;
+            background-color: vr.$secundario;
+
+        }
+    }
+}

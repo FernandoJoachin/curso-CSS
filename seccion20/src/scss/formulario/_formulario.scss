@@ -1,0 +1,64 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.formulario{
+    &__grid{
+        @include mxn.desktop{
+            @include mxn.grid(2,vr.$separacion);
+        }
+    }
+
+    &__contenido{
+        background-color: vr.$primario;
+        padding: vr.$separacion;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    &__titulo{
+        color: vr.$blanco;
+        text-align: center;
+    }
+
+    &__campo{
+        margin-bottom: 1rem;
+    }
+
+    &__label{
+        display: block;
+        text-transform: uppercase;
+        color: vr.$blanco;
+        margin: 1rem 0;
+    }
+
+    &__input{
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+    }
+
+    &__boton{
+        margin-top: 2rem;
+        @include mxn.boton(vr.$secundario, vr.$blanco);
+        
+        @include mxn.tablet{
+            width: 100%;
+        }
+    }
+
+    &__imagen-contenedor{
+        margin-top: vr.$separacion;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__imagen{
+        width: 30rem;
+        @include mxn.desktop{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.header{
+    display: flex;
+    flex-direction: column;
+    padding: vr.$separacion 0;
+    align-items: center;
+
+    @include mxn.desktop{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: 30rem;
+        margin-bottom: vr.$separacion;
+
+        @include mxn.desktop{
+            margin-bottom: 0;
+        }
+    }
+}
