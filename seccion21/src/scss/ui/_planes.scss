@@ -1,0 +1,120 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.planes{
+    background-color: vr.$secundario;
+
+    &__contenido{
+        @include mxn.contenedor;
+    }
+
+    &__titulo{
+        @include mxn.tituloBorder(vr.$blanco, vr.$primario);
+    }
+
+    &__texto{
+        color: vr.$blanco;
+    }
+
+    &__seccion{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+
+        @include mxn.tablet{
+            padding: 2rem 15rem;
+        }
+
+        @include mxn.desktop{
+            flex-direction: row;
+            padding: 0;
+            max-width: 80rem;
+            margin-inline: auto;
+            margin-block-start: 10rem;
+        }
+    }
+}
+
+.plan{
+    flex-grow: 1;
+    background-color: vr.$blanco;
+    padding: 16rem 4rem 4rem 4rem;
+    margin-bottom: 5rem;
+    border-radius: 1rem;
+    transition-property: transform;
+    transition-duration: 0.3s;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    @include mxn.desktop{
+        border-radius: 0;
+        margin-bottom: 0; 
+    }
+
+    &--inicio{
+        @include mxn.bgIcono("../img/icono_inicio.svg");
+    }
+
+    &--negocio{
+        order: -1;
+        @include mxn.bgIcono("../img/icono_negocio.svg");
+        background-color: vr.$primario;
+        border-radius: 2rem;
+
+        @include mxn.desktop{
+            order: unset;
+            margin: -5rem 0;
+            background-position: 48% 7rem;
+            padding-top: calc(16rem + 5rem);
+            z-index: 100;
+        }
+    }
+
+    &--pro{
+        @include mxn.bgIcono("../img/icono_pro.svg");
+    }
+
+    &__titulo{
+        color: vr.$secundario;
+        text-decoration: underline;
+    }
+
+    &__precio{
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: vr.$secundario;
+        margin: 0;
+
+        span{
+            font-size: 1.8rem;
+        }
+    }
+
+    &__caracteristicas{
+        text-align: center;
+        margin-bottom: 2rem;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+
+    &__boton{
+        @include mxn.boton(vr.$primario, vr.$secundario);
+        border: 2px solid vr.$blanco;
+        margin-top: 2rem;
+        border-radius: 1rem;
+        
+        @include mxn.tablet{
+            display: block;
+        }
+    }
+}

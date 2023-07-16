@@ -1,0 +1,20 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.estadisticas{
+    @include mxn.contenedor;
+
+    &__titulo{
+        @include mxn.tituloBorder(vr.$secundario, vr.$primario);
+
+        &::after{
+            width: 100%;
+        }
+
+        @include mxn.tablet{
+            &::after{
+                width: calc(100% + 1rem);
+            }
+        }
+    }
+}
