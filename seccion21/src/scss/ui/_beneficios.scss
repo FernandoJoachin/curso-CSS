@@ -15,11 +15,37 @@
     &__titulo{
         @include mxn.tituloBorder(vr.$secundario, vr.$blanco);
 
+        &::before{
+            width: calc(72% + 1rem);
+        }
+
         &::after{
-            width: 100%;
+            width: calc(66% + 1rem);
+        }
+
+        @include mxn.telefono{
+            &::before{
+                width: calc(88% + 1rem);
+            }
+    
+            &::after{
+                width: calc(28% + 1rem);
+            }
+        }
+
+        @media (min-width: 570px){
+            &::before{
+                width: calc(100% + 1rem);
+            }
         }
 
         @include mxn.tablet{
+            &::before{
+                width: calc(94% + 1rem);
+            }
+        }
+
+        @include mxn.desktop{
             &::after{
                 width: calc(100% + 1rem);
             }

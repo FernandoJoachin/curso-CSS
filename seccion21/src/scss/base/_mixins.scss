@@ -88,9 +88,29 @@
     display: inline-block;
     margin-top: 5rem;
     color: $colorTexto;
+    position: relative;
+    z-index: 1;
 
     @include tablet{ 
         margin-top: 0;
+    }
+
+    @include desktop{
+        &::before{
+            display: none;
+        }
+    }
+
+    &::before{
+        content: "";
+        background-color: $colorLinea;
+        height: 1rem;
+        width: calc(100% + 1rem);
+        display: block;
+        position: absolute;
+        top: 4.2rem;
+        z-index: -1;
+        margin: -1.4rem 0 0 0;
     }
     
     &::after{

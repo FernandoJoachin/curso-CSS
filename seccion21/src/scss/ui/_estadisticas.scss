@@ -7,11 +7,15 @@
     &__titulo{
         @include mxn.tituloBorder(vr.$secundario, vr.$primario);
 
-        &::after{
-            width: 100%;
+        &::before{
+            width: calc(60% + 1rem);
         }
 
-        @include mxn.tablet{
+        &::after{
+            width: calc(53% + 1rem);
+        }
+
+        @include mxn.telefono{
             &::after{
                 width: calc(100% + 1rem);
             }
