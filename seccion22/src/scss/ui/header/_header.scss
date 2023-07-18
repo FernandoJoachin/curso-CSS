@@ -1,0 +1,23 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.header{
+    background-image: url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0 20rem 0;
+
+    &__busqueda{
+        margin-top: 5rem;
+        text-align: center;
+
+        @include mxn.desktop{
+            margin-top: 30rem;
+        }
+    }
+
+    &__busqueda-boton{
+        @include mxn.boton(vr.$blanco,vr.$primario);
+    }
+}
