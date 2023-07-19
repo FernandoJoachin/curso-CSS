@@ -1,0 +1,27 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.barra{
+    display: none;
+
+    @include mxn.desktop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navegacion{
+        display: flex;
+        gap: 4rem;
+    }
+
+    &__enlace{
+        color: vr.$blanco;
+        font-size: 2rem;
+    }
+
+    &__nombre{
+        color: vr.$blanco;
+        margin: 0;
+    }
+}

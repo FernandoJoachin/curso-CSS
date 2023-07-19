@@ -1,0 +1,24 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.estadisticas{
+    @include mxn.contenedor;
+
+    &__titulo{
+        @include mxn.tituloBorder(vr.$secundario, vr.$primario);
+
+        &::before{
+            width: calc(60% + 1rem);
+        }
+
+        &::after{
+            width: calc(53% + 1rem);
+        }
+
+        @include mxn.telefono{
+            &::after{
+                width: calc(100% + 1rem);
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.testimoniales{
+    @include mxn.contenedor; 
+    @include mxn.desktop{
+        @include mxn.grid(5,4rem);
+        align-items: center;
+    }
+
+    &__imagen{
+        grid-column: 1 / 3;
+    }
+
+    &__app{
+        margin: 0 auto;
+
+        @include mxn.tablet{
+            margin-bottom: 5rem;
+            height: 60rem;
+        }
+
+        @include mxn.desktop{
+            margin-bottom: 0;
+            height: auto;
+        }
+    }
+
+    &__contenido{
+        grid-column: 3 / 6;
+    }
+
+    &__titulo{
+        @include mxn.tituloBorder(vr.$secundario,vr.$primario);
+    }
+}
+
+.testimonial{
+    position: relative;
+    background-color: vr.$primario;
+    border: 0.5rem solid vr.$secundario;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    @include mxn.desktop{
+        max-width: 70%;
+
+        &:nth-child(2){
+            margin-left: 10%;
+        }
+
+        &:nth-child(3){
+            margin-left: 20%;
+        }
+
+        &:nth-child(4){
+            margin-left: 30%;
+        }
+
+        &:hover{
+            transform: rotate(-5deg) scale(1.1);
+        }
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background-image: url(../img/comilla.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    &__texto{
+        margin: 0;
+        padding-left: 6rem;
+    }
+}

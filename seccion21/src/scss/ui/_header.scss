@@ -1,0 +1,70 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.header{
+    @include mxn.bgImg("../img/header.jpg", vr.$secundarioOpacity);
+    padding: 5rem 0;
+
+    &__grid{
+        @include mxn.contenedor;
+
+        @include mxn.tablet{
+            @include mxn.contenedor-pq;
+        }
+
+        @include mxn.desktop{
+            @include mxn.contenedor;
+        }
+    }
+
+    &__logo{
+        max-width: 20rem;
+        margin: 0 auto;
+        @include mxn.tablet{
+            margin: 0
+        }
+    }
+
+    &__contenido{
+        padding: 10rem 0;
+
+        @include mxn.desktop{
+            padding: 15rem 0;
+        }
+    }
+
+    &__titulo{
+        color: vr.$blanco;
+        @include mxn.texto-fluido(3.5rem, 4.5rem);
+
+        @include mxn.tablet{
+            font-size: 6rem;
+            max-width: 70%;
+        }
+
+        @include mxn.desktop{
+            max-width: 40%;
+        }
+    }
+
+
+    &__boton{
+        @include mxn.boton(vr.$primario, vr.$secundario);
+        border-radius: 0.5rem;
+        transition-property: background-color color;
+        transition-duration: 0.3s;
+
+        @include mxn.tablet{
+            transition-property: background-color transform color;
+        }
+
+        &:hover{
+            background-color: darken(vr.$primario, 20%);
+            color: vr.$blanco;
+            
+            @include mxn.tablet{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

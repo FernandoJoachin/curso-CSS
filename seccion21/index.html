@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="preload" href="/build/css/app.css" as="style">
+    <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <header class="header">
+        <div class="header__grid">
+            <div class="header__logo">
+                <img src="/build/img/logo.svg" alt="Imagen logo">
+            </div>
+            <div class="header__contenido">
+                <h1 class="header__titulo">Tu plataforma para publicar tus podcast</h1>
+                <a href="#" class="header__boton">Crear cuenta</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="crear seccion">
+        <div class="crear__grid">
+            <div class="crear__imagen">
+                <img src="/build/img/imagen_podcast.svg" alt="Imagen podcast" class="crear__podcast">
+            </div>
+            <div class="crear__contenido">
+                <div class="crear__descripcion">
+                    <h2 class="crear__titulo">Crea tu podcast</h2>
+                    <p class="crear__texto">Nosotros lo distribuimos a las plataformas 
+                    más populares como Google Podcast, Spotify, Apple Podcast y Youtube</p>
+                </div>
+                <div class="crear__sociales">
+                    <i class="crear__social fa-brands fa-google"></i>
+                    <i class="crear__social fa-brands fa-spotify"></i>
+                    <i class="crear__social fa-brands fa-apple"></i>
+                    <i class="crear__social fa-brands fa-youtube"></i>
+                </div>
+                <a href="#" class="crear__boton">Ir ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="beneficios seccion">
+        <div class="beneficios__grid">
+            <div class="beneficios__contenido">
+                <h2 class="beneficios__titulo">Llega a miles y ganas dinero</h2>
+                <p class="beneficios__texto">Los podcast se han convertido en un medio de entretenimiento que cada día gana más seguidores, con temas variados puedes crear tu propio podcast, ser escuchada(o) 
+                por miles de personas y convertir tu pasión en un negocio.</p>
+            </div>
+            <div class="beneficios__imagen">
+                <picture>
+                    <source srcset="/build/img/podcast_cover.avif" type="image/avif">
+                    <source srcset="/build/img/podcast_cover.webp" type="image/webp">
+                    <img loading="lazy" src="/build/img/podcast_cover.png" alt="Imagen beneficios" class="beneficios__podcast">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="estadisticas seccion">
+        <h2 class="estadisticas__titulo">Estadísticas detalladas</h2>
+        <p class="estadisticas__texto">Nosotros lo distribuimos a las plataformas más populares como Google Podcast, Spotify, Apple Podcast y YouTube.</p>
+        <img src="/build/img/grafica.svg" alt="Imagen grafica" class="estadisticas__imagen">
+    </section>
+
+    <section class="planes seccion">
+        <div class="planes__contenido">
+            <h2 class="planes__titulo">Planes</h2>
+            <p class="planes__texto">Inicia gratis, crece tu plan cuando sea necesario</p>
+
+            <div class="planes__seccion">
+                <div class="plan plan--inicio">
+                    <h3 class="plan__titulo">Inicio</h3>
+                    <p class="plan__precio">$2.99 <span>Mes</span></p>
+                    <ul class="plan__listado">
+                        <li class="plan__caracteristicas">30 episodios</li>
+                        <li class="plan__caracteristicas">Estadísticas</li>
+                        <li class="plan__caracteristicas">App para grabar</li>
+                    </ul>
+                    <a href="#" class="plan__boton">Inscribirme</a>
+                </div><!--Plan Inicio-->
+                <div class="plan plan--negocio">
+                    <h3 class="plan__titulo plan__titulo--negocio">Negocio</h3>
+                    <p class="plan__precio">$6.99 <span>Mes</span></p>
+                    <ul class="plan__listado">
+                        <li class="plan__caracteristicas">Episodios ilimitados</li>
+                        <li class="plan__caracteristicas">Estadísticas</li>
+                        <li class="plan__caracteristicas">App para grabar</li>
+                        <li class="plan__caracteristicas">Todas las plataformas</li>
+                        <li class="plan__caracteristicas">Podcast Pagados</li>
+                    </ul>
+                    <a href="#" class="plan__boton">Inscribirme</a>
+                </div><!--Plan Negocio-->
+                <div class="plan plan--pro">
+                    <h3 class="plan__titulo">Pro</h3>
+                    <p class="plan__precio">$4.99 <span>Mes</span></p>
+                    <ul class="plan__listado">
+                        <li class="plan__caracteristicas">50 episodios</li>
+                        <li class="plan__caracteristicas">Estadísticas</li>
+                        <li class="plan__caracteristicas">App para grabar</li>
+                        <li class="plan__caracteristicas">Todas las plataformas</li>
+                    </ul>
+                    <a href="#" class="plan__boton">Inscribirme</a>
+                </div><!--Plan Pro-->
+            </div>
+        </div>
+    </section>
+
+    <section class="testimoniales seccion">
+        <div class="testimoniales__imagen">
+            <picture>
+                <source srcset="/build/img/app.avif" type="image/avif">
+                <source srcset="/build/img/app.webp" type="image/webp">
+                <img loading="lazy" src="/build/img/app.jpg" alt="Imagen app" class="testimoniales__app">
+            </picture>
+        </div>
+        <div class="testimoniales__contenido">
+            <h2 class="testimoniales__titulo">Testimoniales</h2>
+            <div class="testimonial">
+                <p class="testimonial__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptatum pariatur ea 
+                tempora aliquid quisquam sequi labore nemo debitis maiores, aperiam.</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptatum pariatur ea 
+                tempora aliquid quisquam sequi labore nemo debitis maiores, aperiam.</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptatum pariatur ea 
+                tempora aliquid quisquam sequi labore nemo debitis maiores, aperiam.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__grid">
+            <div class="footer__widget">
+                <img src="/build/img/logo.svg" alt="Imagen logo" class="footer__logo">
+            </div>
+            <div class="footer__widget">
+                <h3 class="footer__titulo">Soluciones</h3>
+                <nav class="footer__navegacion">
+                    <a href="#" class="footer__enlace">Soluciones</a>
+                    <a href="#" class="footer__enlace">Gráficas</a>
+                    <a href="#" class="footer__enlace">Distribución</a>
+                </nav>
+            </div>
+            <div class="footer__widget">
+                <h3 class="footer__titulo">Soporte</h3>
+                <nav class="footer__navegacion">
+                    <a href="#" class="footer__enlace">Documentación</a>
+                    <a href="#" class="footer__enlace">Precios</a>
+                    <a href="#" class="footer__enlace">API</a>
+                </nav>
+            </div>
+            <div class="footer__widget">
+                <h3 class="footer__titulo">Podcast FM</h3>
+                <nav class="footer__navegacion">
+                    <a href="#" class="footer__enlace">Nosotros</a>
+                    <a href="#" class="footer__enlace">Blog</a>
+                    <a href="#" class="footer__enlace">Clientes</a>
+                </nav>
+            </div>
+        </div>
+
+        <p class="footer__copyright"> Podcast FM - Todos los derechos reservados &copy; 2023</p>
+    </footer>
+</body>
+</html>

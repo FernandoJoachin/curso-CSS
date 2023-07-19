@@ -1,0 +1,50 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.anfitrion{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    row-gap: 15rem;
+    padding: 5rem;
+    color: vr.$blanco;
+    background-image: linear-gradient(to bottom, vr.$negro 0%, vr.$negro 50%, transparent 50%), url(../img/anfitrion.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%, 60rem;
+    background-position: center, 70% 100%;
+
+    @include mxn.tablet{
+        grid-template-rows: unset;
+        background-image: linear-gradient(to right, vr.$negro 0%, vr.$negro 45%, transparent 55%), url(../img/anfitrion.jpg);
+        background-size: 100%, auto;
+        background-position: center, 20% 30%;
+        padding: 15rem 5rem;
+    }
+
+    @include mxn.desktop{
+        background-position: center, right center;
+    }
+
+    &__contenido{
+        @include mxn.tablet{
+            max-width: 45%;
+        }
+    }
+
+    &__texto{
+        color: vr.$blanco;
+    }
+
+    &__enlace{
+        @include mxn.boton(vr.$blanco, vr.$negro);
+        border-radius: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        transition-property: background-color color;
+        transition-duration: 0.3s;
+
+        &:hover{
+            background-color: vr.$gris;
+            color: vr.$blanco;
+        }
+    }
+}

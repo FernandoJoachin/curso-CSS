@@ -1,0 +1,29 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.lugares{
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(4,30rem);
+        column-gap: 4rem;
+        @include mxn.scrollHorizontal;
+
+        @include mxn.tablet{
+            @include mxn.grid(2,2rem)
+        }
+
+        @include mxn.desktop{
+            @include mxn.grid(4,2rem)
+        }
+    }
+}
+
+.lugar{
+    &__imagen{
+        border-radius: 1rem;
+    }
+
+    &__texto{
+        font-size: 2rem;
+    }
+}

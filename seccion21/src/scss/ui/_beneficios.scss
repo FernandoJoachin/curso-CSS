@@ -1,0 +1,73 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.beneficios{
+    background-color: vr.$primario;
+
+    &__grid{
+        @include mxn.contenedor;
+        @include mxn.tablet{
+            @include mxn.grid(5,4rem);
+            align-items: center;
+        }
+    }
+
+    &__titulo{
+        @include mxn.tituloBorder(vr.$secundario, vr.$blanco);
+
+        &::before{
+            width: calc(72% + 1rem);
+        }
+
+        &::after{
+            width: calc(66% + 1rem);
+        }
+
+        @include mxn.telefono{
+            &::before{
+                width: calc(88% + 1rem);
+            }
+    
+            &::after{
+                width: calc(28% + 1rem);
+            }
+        }
+
+        @media (min-width: 570px){
+            &::before{
+                width: calc(100% + 1rem);
+            }
+        }
+
+        @include mxn.tablet{
+            &::before{
+                width: calc(94% + 1rem);
+            }
+        }
+
+        @include mxn.desktop{
+            &::after{
+                width: calc(100% + 1rem);
+            }
+        }
+    }
+
+    &__contenido{
+        grid-column: 1 / 4;
+        margin-bottom: 5rem;
+
+        @include mxn.desktop{
+            margin-bottom: 0;
+        }
+    }
+
+    &__imagen{
+        grid-column: 4 / 6;
+        transition-property: transform;
+        transition-duration: 0.3s;
+
+        &:hover{
+            transform: rotate(8deg) scale(1.1);
+        }
+    }
+}
