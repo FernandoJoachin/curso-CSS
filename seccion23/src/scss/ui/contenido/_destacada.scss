@@ -1,0 +1,63 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.destacada{
+    margin-top: 5rem;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, vr.$primario 50%, vr.$primario 100%), url(../img/destacada.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%, cover;
+    background-position: center, -100rem -32rem;
+
+    @include mxn.telefono{
+        background-position: center, -50rem -25rem;
+    }
+
+    @include mxn.tablet{
+        background-image: linear-gradient(to right, transparent 0%, transparent 50%, vr.$primario 50%, vr.$primario 100%), url(../img/destacada.jpg);
+        background-position: center, -50rem center;
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+
+        @include mxn.tablet{
+            grid-template-rows: unset;
+            @include mxn.grid(2,2rem);
+        }
+    }
+
+    &__contenido{
+        padding: 5rem;
+        grid-row: 2 / 3;
+
+        @include mxn.tablet{
+            padding: 10rem 5rem;
+            grid-column: 2 / 3;
+        }
+    }
+
+    &__titulo{
+        color: vr.$blanco;
+        text-transform: uppercase;
+    }
+
+    &__descripcion{
+        color: vr.$blanco;
+        font-size: 1.8rem;
+    }
+
+    &__precio{
+        font-size: 3rem;
+        margin: 0;
+        color: darken(yellowgreen, 5%);
+        font-weight: bold;
+    }
+
+    &__enlace{
+        @include mxn.boton(vr.$blanco,vr.$primario);
+        display: block;
+        text-transform: uppercase;
+        border-radius: 0.5rem;
+    }
+}
