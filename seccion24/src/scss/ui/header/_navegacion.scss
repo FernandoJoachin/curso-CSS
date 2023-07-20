@@ -1,0 +1,51 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.navegacion{
+    background-color: vr.$primario;
+    padding: 0.5rem 0;
+    margin: 2rem 0 5rem 0;
+
+    &__border{
+        border-block: 0.2rem dashed vr.$blanco;
+        padding: 1.5rem 0;
+    }
+
+    &__contenedor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mxn.tablet{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+
+    &__enlace{
+        color: vr.$blanco;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid #e1e1e1;
+        width: 90%;
+        text-align: center;
+        transition-property: color font-weight;
+        transition-duration: 0.3s;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        @include mxn.tablet{
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+
+        &:hover{
+            color: darken(vr.$secundario, 10%);
+            font-weight: bold;
+        }
+    }
+}

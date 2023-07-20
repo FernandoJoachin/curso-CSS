@@ -1,0 +1,68 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.cards{
+    &__grid{
+        @include mxn.tablet{
+            @include mxn.grid(3,2rem);
+        }
+
+        @include mxn.desktop{
+            @include mxn.grid(3,4rem);
+        }
+    }
+}
+
+.card{
+    max-width: 35rem;
+    margin: 0 auto 2rem auto;
+
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    @include mxn.tablet{
+        max-width: unset;
+        margin: 0;
+    }
+
+    &__imagen{
+        width: 100%;
+        border: 2rem solid vr.$blanco;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        transition-property: rotate scale;
+        transition-duration: 0.3s;
+
+        &:hover{
+            transform: rotate(4deg) scale(1.3);
+        }
+    }
+
+    &__contenido{
+        max-width: 80%;
+        margin-inline: auto;
+        padding: 2rem;
+        background-color: vr.$blanco;
+        transform: translateY(-7rem);
+    }
+
+    &__titulo{
+        @include mxn.tituloDiseño;
+        font-size: 3.4rem;
+
+        @include mxn.tablet{
+            font-size: 2.5rem
+        }
+
+        @include mxn.desktop{
+            font-size: 3.4rem
+        }
+    }
+
+    &__enlace{
+        @include mxn.boton(darken(vr.$secundario,10%), vr.$blanco);
+        display: block;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+}

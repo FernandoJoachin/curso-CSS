@@ -1,0 +1,27 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.sociales{
+    margin: 5rem 0;
+    display: flex;
+    gap: 2rem;
+    transition-property: transform;
+    transition-duration: 0.3s;
+
+    @include mxn.tablet{
+        margin: 0;
+    }
+
+    &__enlace{
+        font-size: 3rem;
+        color: vr.$secundario;
+
+        @include mxn.desktop{
+            font-size: 3.5rem;
+        }
+
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+}

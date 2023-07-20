@@ -1,0 +1,18 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.bienvenida{
+    text-align: center;
+
+    &__titulo{
+        @include mxn.tituloDiseño;
+    }
+
+    &__texto{
+        font-size: 2.6rem;
+        color: vr.$gris;
+        max-width: 50rem;
+        margin: 3rem auto 0 auto;
+        line-height: 1.5;
+    }
+}
