@@ -1,0 +1,62 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.bloques{
+    &__grid{
+        @include mxn.tablet{
+            @include mxn.grid(2,0rem);
+            grid-auto-flow: dense;
+        }
+    }
+}
+
+.bloque{
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:nth-child(1){
+        background-color: vr.$primario;
+    }
+
+    &:nth-child(2){
+        @include mxn.bgImage("../img/bloque_1.jpg");
+    }
+
+    &:nth-child(3){
+        background-color: vr.$secundario;
+
+        @include mxn.tablet{
+            grid-column: 2 / 3;
+        }
+    }
+
+    &:nth-child(4){
+        background-image: url(../img/bloque_2.jpg);
+        background-size: auto;
+        
+    }
+
+    &__contenido{
+        max-width: 30rem;
+        color: vr.$blanco;
+        border-block: 0.1rem solid vr.$blanco;
+        padding: 2rem 0;
+
+        @include mxn.desktop{
+            max-width: 40rem;
+        }
+    }
+
+    &__titulo{
+        text-transform: uppercase;
+    }
+
+    &__texto{
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+}
