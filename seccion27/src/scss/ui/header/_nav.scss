@@ -1,0 +1,30 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.navegacion{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+
+    @include mxn.tablet{
+        margin-top: 0;
+    }
+
+    &__enlace{
+        color: vr.$blanco;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 0.5rem;
+        font-weight: 700;
+        transition-property: background-color border-radius;
+        transition-duration: 0.3s;
+
+        &:hover{
+            background-color: vr.$primario;
+            border-radius: 0.5rem;
+        }
+    }
+}

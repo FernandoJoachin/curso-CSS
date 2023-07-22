@@ -1,0 +1,39 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.modelo{
+    color: vr.$blanco;
+    text-align: center;
+    margin-top: 5rem;
+
+    @include mxn.tablet{
+        text-align: left;
+        width: 45%;
+    }
+
+    &__nombre{
+        font-size: 8rem;
+        font-weight: bold;
+    }
+
+    &__descripcion{
+        text-align: justify;
+        padding: 1.5rem;
+
+        @include mxn.tablet{
+            padding: 0;
+            text-align: left;
+        }
+    }
+
+    &__precio{
+        color: vr.$primario;
+        font-size: 6rem;
+        font-weight: 900;
+        line-height: 0;
+    }
+
+    &__enlace{
+        @include mxn.botonBorder(vr.$primario,vr.$blanco);
+    }
+}

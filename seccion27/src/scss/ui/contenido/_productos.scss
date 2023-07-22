@@ -1,0 +1,73 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.productos{
+    &__titulo{
+        @include mxn.titulo;
+    }
+
+    &__grid{
+        @include mxn.grid(1,4rem);
+
+        @include mxn.tablet{
+            @include mxn.grid(2,4rem);
+        }
+    
+        @include mxn.desktop{
+            @include mxn.grid(3,4rem);
+        }
+    }
+}
+
+.producto{
+    @include mxn.grid(5,2rem);
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 2rem;
+    border-radius: 1rem;
+
+    &__contenido-imagen{
+        grid-column: 1 / 3;
+        object-fit: cover;
+    }
+
+    &__imagen{
+        transition-property: transform;
+        transition-duration: 0.3s;
+
+        &:hover{
+            transform: scale(1.1) rotate(-4deg);
+        }
+    }
+
+    &__contenido{
+        grid-column: 3 / 6;
+    }
+
+    &__nombre{
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    &__descripcion{
+        font-size: 1.6rem;
+    }
+
+    &__precio{
+        color: vr.$primario;
+        font-size: 6rem;
+        font-weight: 900;
+        margin: 0;
+    }
+
+    &__enlace{
+        @include mxn.botonBorder(vr.$primario,vr.$negro);
+        padding: 1rem 3rem;
+
+        &:hover {
+            background-color: lighten(vr.$primario,10%);
+            color: vr.$blanco;
+        }
+    }
+}
