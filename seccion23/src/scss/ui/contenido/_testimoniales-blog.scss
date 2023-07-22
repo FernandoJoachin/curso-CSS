@@ -1,0 +1,106 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.testimoniales-blog{
+    margin-top: 5rem;
+
+    @include mxn.desktop{
+        @include mxn.grid(3,4rem);
+    }
+
+    &__blog{
+        margin-top: 5rem;
+
+        @include mxn.desktop{
+            margin-top: 0;
+            grid-column: 2 / 4;
+        }
+    }
+
+    &__titulo{
+        @include mxn.tituloDiseño(true);
+    }
+}
+
+.testimonial{
+    margin-top: 3rem;
+    text-align: center;
+
+    &__imagen{
+        width: 20rem;
+        margin-inline: auto;
+    }
+
+    &__contenido{
+        background-color: vr.$blanco;
+        margin-top: -10rem;
+        padding: 10rem 2rem 2rem 2rem;
+    }
+
+    &__autor{
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
+
+    &__texto{
+        &::before{
+            content: "";
+            background-image: url(../img/quote.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            width: 4rem;
+            height: 4rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.entrada{
+    margin-top: 3rem;
+    background-color: vr.$blanco;
+
+    @include mxn.tablet{
+        @include mxn.grid(5,2rem);
+        align-items: center;
+    }
+
+    &__imagen-contenedor{
+        @include mxn.tablet{
+            grid-column: 1 / 3;
+        }
+    }
+
+    &__imagen{
+        width: 100%;
+        height: 35rem;
+        object-fit: cover;
+    }
+
+    &:nth-child(3)  &__imagen{
+        object-position: left;
+    }
+
+    &__contenido{
+        padding: 1rem;
+
+        @include mxn.tablet{
+            grid-column: 3 / 6;
+        }
+    }
+
+    &__meta{
+        font-size: 1.2rem;
+    }
+
+    &__enlace{
+        @include mxn.boton(vr.$primario,vr.$blanco);
+        display: block;
+        text-transform: uppercase;
+        border-radius: 0.5rem;
+
+        @include mxn.desktop{
+            display: inline-block;
+        }
+    }
+}

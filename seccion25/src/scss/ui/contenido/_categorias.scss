@@ -1,0 +1,43 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.categorias{
+    background-color: vr.$grisClaro;
+    padding: 5rem;
+
+    &__titulo{
+        @include mxn.titulo;
+    }
+
+    &__grid{
+        margin-top: 5rem;
+        @include mxn.grid(1,4rem);
+
+        @include mxn.tablet{
+            @include mxn.grid(2,4rem);
+        }
+
+        @include mxn.desktop{
+            @include mxn.grid(3,4rem);
+        }
+    }
+}
+
+.categoria{
+    &__nombre{
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__imagen{
+        border: 2rem solid vr.$blanco;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        transition-property: transform;
+        transition-duration: 0.3s;
+    
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

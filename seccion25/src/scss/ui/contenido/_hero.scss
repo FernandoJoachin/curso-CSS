@@ -1,0 +1,24 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.hero{
+    min-height: 60rem;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__titulo{
+        max-width: 60rem;
+        color: vr.$blanco;
+    }
+
+    &__enlace{
+        @include mxn.boton(vr.$terciario, vr.$blanco);
+        border-radius: 0.5rem;
+    }
+}

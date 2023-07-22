@@ -1,0 +1,107 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.header{
+    background-image: linear-gradient(to right, transparentize(vr.$primario,0.1) 0%, transparentize(vr.$primario,0.1) 100%), url(../img/header_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    position: relative;
+
+    @include mxn.tablet{
+        padding: 3rem 0 20rem 0;
+    }
+
+    &__barra{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mxn.tablet{
+            flex-direction: row;
+            justify-content: space-between
+        }
+    }
+
+    &__logo{
+        width: 25rem;
+
+        @include mxn.tablet{
+            width: 18rem;
+        }
+
+        @include mxn.desktop{
+            width: 25rem;
+        }
+    }
+
+    &__contenido{
+        @include mxn.tablet{
+            margin-top: 10rem;
+            max-width: 50rem;
+        }
+    }
+
+    &__titulo{
+        color: vr.$blanco;
+        text-align: center;
+
+        @include mxn.tablet{
+            text-align: left;
+        }
+    }
+
+    &__texto{
+        color: vr.$blanco;
+        display: none;
+
+        @include mxn.tablet{
+            display: block;
+        }
+    }
+
+    &__imagen{
+        display: none;
+
+        @include mxn.tablet{
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -5rem;
+            max-width: 35rem;
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 5rem;
+        }
+
+        @include mxn.desktopXL{
+            max-width: 60rem;
+        }
+    }
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+
+    @include mxn.tablet{
+        flex-direction: row;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    &__enlace{
+        color: vr.$blanco;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        @include mxn.tablet{
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.grupos{
+    background-image: linear-gradient(to bottom, vr.$primario 0%, lighten(vr.$primario,20%) 50%, vr.$secundario 50%, lighten(vr.$secundario,15%) 100%);
+    color: vr.$blanco;
+    padding: 5rem 0;
+
+    @include mxn.tablet{
+        background-image: linear-gradient(to right, vr.$primario 0%, lighten(vr.$primario,20%) 50%, vr.$secundario 50%, lighten(vr.$secundario,15%) 100%);
+    }
+
+    &__grid{
+        @include mxn.grid(1,5rem);
+
+        @include mxn.tablet{ 
+            @include mxn.grid(2,5rem);
+        }
+    }
+
+    &__heading{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__titulo{
+        font-size: 3rem;
+    }
+
+    &__texto{
+        color: vr.$blanco;
+        font-size: 2.4rem;
+        line-height: 2;
+    }
+}

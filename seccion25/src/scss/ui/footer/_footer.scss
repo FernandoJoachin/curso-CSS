@@ -1,0 +1,25 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.footer{
+    background-color: vr.$grisClaro;
+
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0;
+
+        @include mxn.tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__copyright{
+        font-size: 1.5rem;
+        margin: 0;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+}

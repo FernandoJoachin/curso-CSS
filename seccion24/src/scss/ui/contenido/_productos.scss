@@ -1,0 +1,61 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.productos{
+    &__titulo{
+        @include mxn.tituloDiseño;
+        margin-bottom: 5rem;
+    }
+
+    &__grid{
+        @include mxn.grid(1,2rem);
+
+        @include mxn.tablet{
+            @include mxn.grid(2,2rem);
+        }
+
+        @include mxn.desktop{
+            @include mxn.grid(4,2rem);
+        }
+    }
+}
+
+.producto{
+    &__contenido{
+        background-color: vr.$blanco;
+        padding: 2rem;
+    }
+
+    &__mask{
+        overflow: hidden;
+    }
+
+    &__imagen{
+        width: 100%;
+        transition-property: transform;
+        transition-duration: 0.3s;
+
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    &__nombre{
+        @include mxn.titulo;
+        font-size: 2.4rem;
+        color: vr.$secundario;
+    }
+
+    &__descripcion{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        line-height: 1.8;
+    }
+
+    &__precio{
+        text-align: center;
+        color: vr.$gris;
+        font-size: 4rem;
+        margin: 0;
+    }
+}
