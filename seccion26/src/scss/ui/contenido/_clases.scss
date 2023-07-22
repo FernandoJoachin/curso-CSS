@@ -1,0 +1,71 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.clases{
+    background-color: vr.$gris;
+    padding: 5rem 0;
+
+    &__titulo{
+        @include mxn.tituloDiseño;
+    }
+
+    &__grid{
+        @include mxn.grid(1,2rem);
+
+        @include mxn.tablet{
+            @include mxn.grid(2,4rem);
+            align-items: center;
+        }
+
+        @include mxn.desktop{
+            @include mxn.grid(3,3rem);
+        }
+    }
+}
+
+.clase{
+    background-color: vr.$blanco;
+    border: 0.1rem solid darken(vr.$gris,10%);
+
+    @include mxn.tablet{
+        transition-property: transform;
+        transition-duration: 0.3s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &__meta{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: vr.$primario;
+        color: vr.$blanco;
+        padding: 0 1rem;
+    }
+
+    &__precio{
+        background-color: vr.$secundario;
+        color: vr.$negro;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    &__contenido{
+        padding: 2rem;
+    }
+
+    &__descripcion{
+        color: vr.$primario;
+    }
+
+    &__enlace{
+        @include mxn.boton(vr.$primario,vr.$blanco);
+        display: block;
+        font-size: 1.6rem;
+        padding: 1rem;
+    }
+}

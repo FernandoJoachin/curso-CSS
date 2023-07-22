@@ -1,0 +1,46 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.footer{
+    padding: 3rem 0 1rem 0;
+    border-bottom: 1rem solid vr.$primario;
+
+    @include mxn.desktop{
+        padding: 3rem 0;
+    }
+
+    &__grid{
+        @include mxn.desktop{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__contenido{
+        @include mxn.desktop{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo{
+        margin-inline: auto;
+        max-width: 10rem;
+        margin-top: 3rem;
+
+        @include mxn.desktop{
+            margin-top: 0;
+        }
+    }
+
+    &__copyright{
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 0;
+
+        @include mxn.desktop{ 
+            margin: 0;
+        }
+    }
+}
