@@ -1,0 +1,16 @@
+@use "base/mixins" as mxn;
+
+.nosotros{
+    &__titulo{
+        @include mxn.titulo;
+    }
+    
+    &__grid{
+        @include mxn.grid(1,4rem);
+
+        @include mxn.tablet{
+            @include mxn.grid(2,4rem);
+            align-items: center;
+        }
+    }
+}

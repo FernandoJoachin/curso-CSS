@@ -17,6 +17,17 @@
             @include mxn.grid(3,4rem);
         }
     }
+
+    &__boton{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem
+    }
+
+    &__enlace{
+        @include mxn.boton(vr.$primario,vr.$blanco);
+        text-transform: uppercase;
+    }
 }
 
 .producto{
@@ -25,6 +36,12 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     padding: 2rem;
     border-radius: 1rem;
+
+    &--pagina{
+        box-shadow: none;
+        padding: 0;
+        border: none;
+    }
 
     &__contenido-imagen{
         grid-column: 1 / 3;
