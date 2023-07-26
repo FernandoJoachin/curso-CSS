@@ -1,0 +1,7 @@
+@use "base/mixins" as mxn;
+
+.entrada-pagina{
+    &__titulo{
+        @include mxn.titulo;
+    }
+}

@@ -1,0 +1,65 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.blog{
+    &__titulo{
+        @include mxn.titulo;
+    }
+
+    &__grid{
+        @include mxn.grid(1,4rem);
+
+        @include mxn.tablet{
+            @include mxn.grid(2,4rem);
+        }
+
+        @include mxn.desktop{
+            @include mxn.grid(4,4rem);
+
+            &--pagina{
+                @include mxn.grid(3,4rem);
+            }
+        }
+    }
+}
+
+.entrada{
+    max-width: 80rem;
+    margin: 0 auto;
+
+    &__contenido{
+        padding: 2rem;
+    }
+
+    &__titulo{
+        font-weight: normal;
+        font-size: 2.8rem;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    &__fecha{
+        color: vr.$primario;
+        font-size: 1.5rem;
+    }
+
+    &__texto{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        font-size: 1.5rem
+    }
+
+    &__enlace{
+        @include mxn.botonBorder(vr.$primario,vr.$negro);
+        display: block;
+        text-align: center;
+        padding: 1rem 3rem;
+
+        &:hover {
+            background-color: lighten(vr.$primario,10%);
+            color: vr.$blanco;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.cursos{
+    background-image: linear-gradient(to right, rgb(0 0 0 / 0.65), rgb(0 0 0 / 0.65)), url(../img/cursos_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    padding: 10rem 0;
+    margin-top: 10rem;
+
+    &__grid{
+        @include mxn.tablet{
+            @include mxn.grid(3,1rem)
+        }
+
+        @include mxn.desktop{
+            @include mxn.grid(2,1rem)
+        }
+    }
+
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mxn.tablet{
+            grid-column: 2 / 4;
+        }
+
+        @include mxn.desktop{
+            grid-column: 2 / 3;
+        }
+    }
+
+    &__titulo{
+        @include mxn.titulo;
+        margin: 0;
+    }
+
+    &__texto{
+        color: vr.$blanco;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    &__enlace{
+        @include mxn.botonBorder(vr.$primario,vr.$blanco);
+    }
+}

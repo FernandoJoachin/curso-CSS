@@ -51,6 +51,20 @@
     grid-template-columns: repeat($columnas, 1fr);
 }
 
+@mixin tituloDiseño{
+    text-align: center;
+
+    &::after{
+        content: "";
+        display: block;
+        height: 10rem;
+        margin-inline: auto;
+        background-image: url(../img/separador.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
 @mixin bgImage($url){
     background-image: url($url);
     background-repeat: no-repeat;

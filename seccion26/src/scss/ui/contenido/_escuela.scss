@@ -1,0 +1,24 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.escuela{
+    @include mxn.bgImage("../img/chef_bg.jpg");
+    padding: 20rem 0;
+    text-align: center;
+    color: vr.$blanco;
+
+    &__titulo{
+        @include mxn.tituloDiseño;
+        font-weight: bold;
+    }
+
+    &__texto{
+        font-size: 2.5rem;
+        max-width: 50rem;
+        margin-inline: auto;
+    }
+
+    &__enlace{
+        @include mxn.boton(vr.$primario,vr.$blanco);
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuitarLA: Producto</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="preload" href="/build/css/app.css" as="style">
+    <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <header class="header">
+        <div class="header__contenido contenedor">
+            <div class="header__barra">
+                <a href="/">
+                    <img src="/build/img/logo.svg" alt="Imagen logo" class="header__logo">
+                </a>
+                <nav class="navegacion">
+                    <a href="/index.html" class="navegacion__enlace">Inicio</a>
+                    <a href="/nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="/blog.html" class="navegacion__enlace">Blog</a>
+                    <a href="/tienda.html" class="navegacion__enlace">Tienda</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+   <main class="producto-pagina contenedor">
+    <div class="producto producto--pagina">
+        <div class="producto__contenido-imagen">
+            <picture>
+                <source srcset="/build/img/guitarra_04.avif" type="image/avif">
+                <source srcset="/build/img/guitarra_04.webp" type="image/webp">
+                <img loading="lazy" src="/build/img/guitarra_04.jpg" alt="Imagen guitarra 4" class="producto__imagen">
+            </picture>
+        </div>
+        <div class="producto__contenido">
+            <h3 class="producto__nombre">Vai</h3>
+            <p class="producto__descripcion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex qui aspernatur excepturi quia aperiam error quam assumenda, omnis libero recusandae ad accusamus quae deserunt, 
+            dolores cumque nostrum ipsum, voluptatibus non.</p>
+            <p class="producto__precio">$299</p>
+            <form class="formulario">
+                <label for="cantidad" class="formulario__label">Cantidad:</label>
+                <input type="number" class="formulario__input" id="cantidad" placeholder="Ingrese la cantidad">
+                <input type="submit" class="formulario__submit" value="Agregar al carrito">
+            </form>
+        </div>
+    </div>
+   </main>
+
+    <footer class="footer">
+        <div class="footer__grid contenedor">
+            <div class="footer__logo">
+                <a href="/">
+                    <img src="/build/img/logo.svg" alt="Imagen logo" class="footer__logo">
+                </a>
+            </div>
+            <div class="footer__contenido">
+                <div class="footer__sociales">
+                    <a href="https://facebook.com" class="footer__social"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com" class="footer__social"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com" class="footer__social"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://tiktok.com" class="footer__social"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item">Legal</li>
+                    <li class="footer__menu-item">Cookies</li>
+                    <li class="footer__menu-item">Privacy</li>
+                    <li class="footer__menu-item">Shipping</li>
+                    <li class="footer__menu-item">Refounds</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__copyright">GuitarLA - Todos los derechos reservados &copy; 2023</p>
+    </footer>
+</body>
+</html>

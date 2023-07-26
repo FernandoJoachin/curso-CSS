@@ -1,0 +1,30 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.nosotros{
+    padding: 5rem 0;
+
+    &__titulo{
+        @include mxn.tituloDiseño;
+    }
+
+    &__grid{
+        @include mxn.grid(1,5rem);
+
+        @include mxn.desktop{
+            @include mxn.grid(3,5rem);
+        }
+    }
+
+    &__bloque{
+        text-align: center;
+    }
+
+    &__imagen{
+        margin: 0 auto;
+    }
+
+    &__bloque-titulo{
+        padding-top: 0.5rem;  
+    }
+}

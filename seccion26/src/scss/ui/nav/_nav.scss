@@ -11,6 +11,16 @@
         flex-direction: row;
     }
 
+    &--footer{
+        @include mxn.tablet{
+            flex-direction: column;
+        }
+
+        @include mxn.desktop{
+            flex-direction: row;
+        }
+    }
+
     &__enlace{
         font-size: 2rem;
 
